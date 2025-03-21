@@ -1,5 +1,3 @@
-import time
-
 import streamlit as st
 
 from utils import cria_chain_conversa, PASTA_ARQUIVOS
@@ -7,17 +5,16 @@ from utils import cria_chain_conversa, PASTA_ARQUIVOS
 
 def sidebar():
     uploaded_pdfs = st.file_uploader(
-        'Adicione seus arquivos pdf', 
-        type=['.pdf'], 
-        accept_multiple_files=True
-        )
+        'Adicione seus arquivos pdf',
+        type=['.pdf'],
+        accept_multiple_files=True)
     if not uploaded_pdfs is None:
         for arquivo in PASTA_ARQUIVOS.glob('*.pdf'):
             arquivo.unlink()
         for pdf in uploaded_pdfs:
             with open(PASTA_ARQUIVOS / pdf.name, 'wb') as f:
                 f.write(pdf.read())
-    
+
     label_botao = 'Inicializar ChatBot'
     if 'chain' in st.session_state:
         label_botao = 'Atualizar ChatBot'
@@ -36,7 +33,7 @@ def chat_window():
     if not 'chain' in st.session_state:
         st.error('Faça o upload de PDFs para começar!')
         st.stop()
-    
+
     chain = st.session_state['chain']
     memory = chain.memory
 
@@ -58,11 +55,11 @@ def chat_window():
         st.rerun()
 
 
-
 def main():
     with st.sidebar:
         sidebar()
     chat_window()
+
 
 if __name__ == '__main__':
     main()
