@@ -3,14 +3,20 @@ from pathlib import Path
 import streamlit as st
 
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
+
 from langchain.memory import ConversationBufferMemory
+
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from langchain_community.vectorstores.faiss import FAISS
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai.chat_models import ChatOpenAI
+
 from langchain.prompts import PromptTemplate
-from configs import *
+
+from configs import get_config
 
 from dotenv import load_dotenv, find_dotenv
 

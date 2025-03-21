@@ -24,7 +24,7 @@ def config_page():
             st.rerun()
         except json.JSONDecodeError:
             st.error("Erro ao salvar parâmetros: formato inválido. Certifique-se de que está no formato JSON correto.")
-    
+
     if st.button('Atualizar ChatBot', use_container_width=True):
         if len(list(PASTA_ARQUIVOS.glob('*.pdf'))) == 0:
             st.error('Adicione arquivos .pdf para inicializar o chatbot')

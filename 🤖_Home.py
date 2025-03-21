@@ -51,7 +51,8 @@ def chat_window():
         chat = container.chat_message('ai')
         chat.markdown('Gerando resposta')
 
-        chain.invoke({'question': nova_mensagem})
+        resposta = chain.invoke({'question': nova_mensagem})
+        st.session_state['ultima_resposta'] = resposta
         st.rerun()
 
 
