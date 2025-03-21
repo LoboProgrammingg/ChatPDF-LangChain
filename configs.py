@@ -2,7 +2,7 @@ import streamlit as st
 
 MODEL_NAME = 'gpt-3.5-turbo-0125'
 RETRIEVAL_SEARCH_TYPE = 'mmr'
-RETRIEVAL_KWARGS = {"k": 5, "fetch_k": 20}
+RETRIEVAL_KWARGS = {"k": 10, "fetch_k": 100}
 PROMPT = '''Você é um Chatbot amigável que auxilia na interpretação
 de documentos que lhe são fornecidos.
 No contexto forncido estão as informações dos documentos do usuário.

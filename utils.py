@@ -37,8 +37,8 @@ def importacao_documentos():
 
 def split_de_documentos(documentos):
     recur_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=2500,
-        chunk_overlap=250,
+        chunk_size=2000,
+        chunk_overlap=200,
         separators=["/n\n", "\n", ".", " ", ""]
     )
     documentos = recur_splitter.split_documents(documentos)
