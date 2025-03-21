@@ -58,16 +58,16 @@ def cria_chain_conversa():
     documentos = split_de_documentos(documentos)
     vector_store = cria_vector_store(documentos)
 
-    chat = ChatOpenAI(model=MODEL_NAME)
+    chat = ChatOpenAI(model=get_config('model_name'))
     memory = ConversationBufferMemory(
         return_messages=True,
         memory_key='chat_history',
         output_key='answer')
     retriever = vector_store.as_retriever(
-        search_type=RETRIEVAL_SEARCH_TYPE,
-        search_kwargs=RETRIEVAL_KWARGS
+        search_type=get_config('retrieval_search_type'),
+        search_kwargs=get_config('retrieval_kwargs')
     )
-    prompt = PromptTemplate.from_template(PROMPT)
+    prompt = PromptTemplate.from_template(get_config('prompt'))
     chat_chain = ConversationalRetrievalChain.from_llm(
         llm=chat,
         memory=memory,
