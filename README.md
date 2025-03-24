@@ -2,6 +2,10 @@
 
 ## Tela Inicial
 ![Image](https://github.com/user-attachments/assets/a4c255aa-b5e5-4c64-818e-8a4316b8c717)
+
+## Debug
+![Image](https://github.com/user-attachments/assets/c5f0299c-792d-449f-9b7c-528c5b1a065e)
+
 ## Descrição
 
 ChatPDF-LangChain é um projeto inovador desenvolvido em Python que combina o poder do Processamento de Linguagem Natural (NLP) com a manipulação de documentos PDF. Utilizando a biblioteca LangChain, este projeto permite a extração e análise de texto de arquivos PDF, proporcionando uma interface de chat interativa para facilitar a interação com o conteúdo dos documentos.
