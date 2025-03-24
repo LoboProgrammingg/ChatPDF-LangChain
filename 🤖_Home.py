@@ -28,7 +28,8 @@ def sidebar():
 
 
 def chat_window():
-    st.header('🤖 Bem-vindo ao ChatPDF by Matheus Lobo', divider=True)
+    st.header('🤖 Bem-vindo ao ChatPDF da UGGOV', divider=True)
+    st.text('by Matheus Lobo Camara')
 
     if not 'chain' in st.session_state:
         st.error('Faça o upload de PDFs para começar!')
