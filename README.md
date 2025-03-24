@@ -3,10 +3,10 @@
 ## Tela Inicial
 ![Image](https://github.com/user-attachments/assets/a4c255aa-b5e5-4c64-818e-8a4316b8c717)
 
-## Debug
+## Tela de Debug
 ![Image](https://github.com/user-attachments/assets/c5f0299c-792d-449f-9b7c-528c5b1a065e)
 
-## Configurações
+## Tela de Configurações
 ![Image](https://github.com/user-attachments/assets/007dc3cb-97de-4455-b726-767421f307c1)
 
 ## Descrição
